@@ -25,7 +25,7 @@ export class LoginComponent {
         console.log('Login response:', response);
         if (response === 'Login Success') {
           this.loginStatus = response;
-          this.router.navigate(['/anasayfa']); 
+          this.router.navigate(['/anamenü']); 
         } else {
           this.loginStatus = 'Login Failed';
           console.log('Login failed: Response did not indicate success.');
@@ -34,9 +34,13 @@ export class LoginComponent {
       error: (err) => {
         console.error('Login failed', err);
         this.loginStatus = 'Login Failed';
-        console.log('Error details:', err);  // Hata detaylarını konsola yazdır
+        console.log('Error details:', err);
       }
     });
+  }
+
+  goAnaMenü(){
+    this.router.navigate(['/anamenü']);
   }
 
 }

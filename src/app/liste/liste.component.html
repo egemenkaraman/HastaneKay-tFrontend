@@ -1,0 +1,38 @@
+<!-- liste.component.html -->
+<div class="container">
+    <h1>Hasta Listesi</h1>
+  
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>İsim</th>
+          <th>Soyisim</th>
+          <th>Doğum Tarihi</th>
+          <th>Cinsiyet</th>
+          <th>Telefon</th>
+          <th>Mail</th>
+          <th>Adres</th>
+          <th>Kayıt Tarihi</th>
+          <th>Kimlik</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let hasta of hastalar">
+          <td>{{ hasta.id }}</td>
+          <td>{{ hasta.isim }}</td>
+          <td>{{ hasta.soyisim }}</td>
+          <td>{{ hasta.dogumtarihi}}</td>
+          <td>{{ hasta.cinsiyet }}</td>
+          <td>{{ hasta.telefon }}</td>
+          <td>{{ hasta.mail }}</td>
+          <td>{{ hasta.adres }}</td>
+          <td>{{ hasta.kayit_tarihi}}</td>
+          <td>{{ hasta.kimlik }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <button (click)="goBack()" class="btn btn-primary">Geri Dön</button>
+</div>
+  
