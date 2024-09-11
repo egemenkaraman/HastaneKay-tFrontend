@@ -1,0 +1,69 @@
+/* Genel yapı */
+.container {
+    width: 100%; /* Genişliği %100 yapar */
+    max-width: 1400px; /* Maksimum genişliği sınırlar */
+    background: linear-gradient(45deg, #833AB4, #FD1D1D, #F56040, #FCAF45);
+    color: #fff; /* Yazı rengi */
+    padding: 100px; /* İçerideki boşluk */
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 0 auto; /* Ortalar */
+    box-sizing: border-box; /* Padding ve border'ı genişlik ve yüksekliğe dahil eder */
+}
+
+/* Başlık */
+h1 {
+    font-size: 34px; /* Başlık boyutu */
+    font-weight: bold; /* Kalın yazı */
+    text-align: center; /* Metni ortalar */
+    margin-bottom: 20px; /* Başlık ile tablo arasındaki boşluk */
+}
+
+/* Tablo */
+.table {
+    width: 100%; /* Tablo genişliğini %100 yapar */
+    border-collapse: collapse; /* Hücre sınırlarını birleştirir */
+}
+
+.table-striped thead {
+    background-color: #343a40; /* Başlık arka plan rengi */
+}
+
+.table-striped thead th {
+    color: #fff; /* Başlık yazı rengi */
+    padding: 12px; /* Hücre içi boşluk */
+}
+
+.table-striped tbody tr:nth-child(even) {
+    background-color: #495057; /* Çift numaralı satırlar için arka plan rengi */
+}
+
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #6c757d; /* Tek numaralı satırlar için arka plan rengi */
+}
+
+.table-striped td {
+    color: #fff; /* Hücre yazı rengi */
+    padding: 12px; /* Hücre içi boşluk */
+    border: 1px solid #dee2e6; /* Hücre kenarlığı */
+}
+
+/* Butonlar */
+.btn {
+    display: inline-block; /* Butonları yatayda hizalar */
+    padding: 10px 20px; /* İçerideki boşluk */
+    border: none; /* Kenarlık yok */
+    border-radius: 5px; /* Kenar köşelerini yuvarlar */
+    color: #fff; /* Yazı rengi */
+    font-size: 16px; /* Yazı boyutu */
+    cursor: pointer; /* Fare üzerine geldiğinde işaretçi değişir */
+    transition: background-color 0.3s, opacity 0.3s; /* Arka plan renginin ve şeffaflığın geçiş efekti */
+}
+
+.btn-primary {
+    background-color: #6c757d; /* Mavi arka plan */
+}
+
+.btn-primary:hover {
+    opacity: 0.9; /* Üzerine gelindiğinde şeffaflık */
+}

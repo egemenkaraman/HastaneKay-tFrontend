@@ -1,0 +1,74 @@
+/* Genel yapı */
+.container {
+    width: 100%; /* Genişliği %100 yapar */
+    max-width: 1400px; /* Maksimum genişliği sınırlar */
+    background: linear-gradient(45deg, #833AB4, #FD1D1D, #F56040, #FCAF45);
+    color: #fff; /* Yazı rengi */
+    padding: 30px; /* İçerideki boşluk */
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 0 auto; /* Ortalar */
+    box-sizing: border-box; /* Padding ve border'ı genişlik ve yüksekliğe dahil eder */
+}
+
+/* Başlık */
+.title {
+    font-size: 34px; /* Başlık boyutu */
+    font-weight: bold; /* Kalın yazı */
+    text-align: center; /* Metni ortalar */
+    margin-bottom: 20px; /* Başlık ile form arasındaki boşluk */
+}
+
+/* Form elemanları */
+.form-group {
+    margin-bottom: 15px; /* Form elemanları arasındaki boşluk */
+}
+
+.form-group label {
+    display: block; /* Etiketin tam genişlikte görünmesini sağlar */
+    margin-bottom: 5px; /* Etiket ile input arasındaki boşluk */
+}
+
+.form-control {
+    width: 100%; /* Genişliği %100 yapar */
+    padding: 10px; /* İçerideki boşluk */
+    border: 1px solid #ddd; /* Kenarlık rengi */
+    border-radius: 5px; /* Kenar köşelerini yuvarlar */
+    box-sizing: border-box; /* Padding ve border'ı genişlik ve yüksekliğe dahil eder */
+}
+
+.text-danger {
+    color: #ffffff; /* Hata mesajı rengi */
+    font-size: 0.875em; /* Küçük yazı boyutu */
+    margin-top: 5px; /* Mesaj ile input arasındaki boşluk */
+}
+
+/* Butonlar */
+.button-group {
+    display: flex; /* Flexbox ile butonları hizalar */
+    gap: 10px; /* Butonlar arasındaki boşluk */
+    justify-content: center; /* Butonları ortalar */
+}
+
+.btn {
+    width: auto; /* Butonun genişliğini içeriğe göre ayarlar */
+    padding: 10px 20px; /* İçerideki boşluk */
+    border: none; /* Kenarlık yok */
+    border-radius: 5px; /* Kenar köşelerini yuvarlar */
+    color: #070202; /* Yazı rengi */
+    font-size: 16px; /* Yazı boyutu */
+    cursor: pointer; /* Fare üzerine geldiğinde işaretçi değişir */
+    transition: background-color 0.3s; /* Arka plan renginin geçiş efekti */
+}
+
+.btn-primary {
+    background-color: #28a745; /* Beyaz arka plan */
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Beyaz arka plan */
+}
+
+.btn:hover {
+    opacity: 0.9; /* Üzerine gelindiğinde şeffaflık */
+}

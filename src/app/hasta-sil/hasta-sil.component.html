@@ -1,6 +1,6 @@
 <!-- hasta-sil.component.html -->
 <div class="container">
-    <h2>Hasta Silme</h2>
+    <h2 class="title">Hasta Silme</h2>
     
     <!-- Form for deleting a patient -->
     <form (ngSubmit)="deleteHasta()">
@@ -8,15 +8,14 @@
         <label for="id">Hasta ID:</label>
         <input type="text" id="id" [(ngModel)]="id" name="id" class="form-control" required />
       </div>
-      <button type="submit" class="btn btn-danger">Sil</button>
+      <div class="form-buttons">
+        <button type="submit" class="btn btn-danger">Sil</button>
+        <button (click)="goBack()" type="button" class="btn btn-secondary">Geri Dön</button>
+      </div>
     </form>
   
     <!-- Message Display -->
     <div *ngIf="message" class="alert" [ngClass]="{'alert-success': message.includes('Başarıyla'), 'alert-danger': !message.includes('Başarıyla')}">
       {{ message }}
     </div>
-  
-    <!-- Go Back Button -->
-    <button (click)="goBack()" class="btn btn-secondary">Geri Dön</button>
-  </div>
-  
+</div>
