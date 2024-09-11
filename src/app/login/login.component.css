@@ -1,0 +1,49 @@
+.login-container {
+    width: 900%; /* Genişliği yüzde olarak ayarlar */
+    max-width: 1420px; /* Maksimum genişliği sınırlar */
+    background: linear-gradient(45deg, #833AB4, #FD1D1D, #F56040, #FCAF45);
+    color: #fff; /* Yazı rengi */
+    padding: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Kutuyu tam ortaya alır */
+    box-sizing: border-box; /* Padding ve border'ı genişlik ve yüksekliğe dahil eder */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  .success {
+    color: green;
+  }
+  
+  .error {
+    color: rgb(14, 13, 13);
+  }
+  .login-container {
+    /* Diğer stil kuralları */
+    display: flex; /* Flexbox ile merkezi hizalama */
+    flex-direction: column; /* İçeriği dikey olarak hizalar */
+    align-items: center; /* Yatayda ortalar */
+    justify-content: column; /* Dikeyde ortalar */
+  }
+  
+  .login-title {
+    margin: 0; /* Başlığın çevresinde ekstra boşluk olmaması için */
+    padding: 0; /* Başlığın çevresinde ekstra boşluk olmaması için */
+    font-size: 2em; /* Başlık boyutunu ayarlamak için */
+  }
+  
+  label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
