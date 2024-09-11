@@ -21,6 +21,17 @@ export class HastaneService {
     return this.http.get<hastaEntity[]>(hastalarURL)
   }
 
+  addHasta(hasta: hastaEntity): Observable<hastaEntity> {
+    const addhastaUrl =`${this.BASEurl}/hastaEkle`;
+    return this.http.post<hastaEntity>(addhastaUrl, hasta);
+  }
+
+  deleteHasta(id: string): Observable<string> {
+    const deleteUrl =`${this.BASEurl}/hastaSil`;
+    return this.http.post<string>(deleteUrl, null, {
+      params: { id }
+    });
+  }
 
 
 

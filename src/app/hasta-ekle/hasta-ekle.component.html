@@ -1,1 +1,96 @@
-<p>hasta-ekle works!</p>
+<!-- hasta-ekle.component.html -->
+<div class="container">
+    <h2>Hasta Ekle</h2>
+  
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="id">ID:</label>
+        <input id="id" formControlName="id" type="text" class="form-control" />
+        <div *ngIf="userForm.get('id')?.invalid && userForm.get('id')?.touched" class="text-danger">
+          ID gerekli.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="isim">İsim:</label>
+        <input id="isim" formControlName="isim" type="text" class="form-control" />
+        <div *ngIf="userForm.get('isim')?.invalid && userForm.get('isim')?.touched" class="text-danger">
+          İsim gerekli.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="soyisim">Soyisim:</label>
+        <input id="soyisim" formControlName="soyisim" type="text" class="form-control" />
+        <div *ngIf="userForm.get('soyisim')?.invalid && userForm.get('soyisim')?.touched" class="text-danger">
+          Soyisim gerekli.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="dogumtarihi">Doğum Tarihi:</label>
+        <input id="dogumtarihi" formControlName="dogumtarihi" type="date" class="form-control" />
+        <div *ngIf="userForm.get('dogumtarihi')?.invalid && userForm.get('dogumtarihi')?.touched" class="text-danger">
+          Doğum tarihi gerekli.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="cinsiyet">Cinsiyet:</label>
+        <select id="cinsiyet" formControlName="cinsiyet" class="form-control">
+          <option value="" disabled seçin>Cinsiyet seçin</option>
+          <option value="erkek">Bay</option>
+          <option value="kadın">Bayan</option>
+          <option value="kadın">Diğer</option>
+
+        </select>
+        <div *ngIf="userForm.get('cinsiyet')?.invalid && userForm.get('cinsiyet')?.touched" class="text-danger">
+          Cinsiyet gerekli.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="telefon">Telefon:</label>
+        <input id="telefon" formControlName="telefon" type="text" class="form-control" />
+        <div *ngIf="userForm.get('telefon')?.invalid && userForm.get('telefon')?.touched" class="text-danger">
+          Telefon gerekli.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="mail">Mail:</label>
+        <input id="mail" formControlName="mail" type="email" class="form-control" />
+        <div *ngIf="userForm.get('mail')?.invalid && userForm.get('mail')?.touched" class="text-danger">
+          Geçerli bir mail adresi gerekli.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="adres">Adres:</label>
+        <textarea id="adres" formControlName="adres" class="form-control"></textarea>
+        <div *ngIf="userForm.get('adres')?.invalid && userForm.get('adres')?.touched" class="text-danger">
+          Adres gerekli.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="kayit_tarihi">Kayıt Tarihi:</label>
+        <input id="kayit_tarihi" formControlName="kayit_tarihi" type="date" class="form-control" />
+        <div *ngIf="userForm.get('kayit_tarihi')?.invalid && userForm.get('kayit_tarihi')?.touched" class="text-danger">
+          Kayıt tarihi gerekli.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="kimlik">Kimlik:</label>
+        <input id="kimlik" formControlName="kimlik" type="text" class="form-control" />
+        <div *ngIf="userForm.get('kimlik')?.invalid && userForm.get('kimlik')?.touched" class="text-danger">
+          Kimlik gerekli.
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="userForm.invalid">Ekle</button>
+      <button type="button" class="btn btn-secondary" (click)="goBack()">Geri Dön</button>
+    </form>
+  </div>
+  
