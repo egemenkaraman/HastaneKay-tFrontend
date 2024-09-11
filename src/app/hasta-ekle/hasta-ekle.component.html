@@ -39,8 +39,8 @@
         <label for="cinsiyet">Cinsiyet:</label>
         <select id="cinsiyet" formControlName="cinsiyet" class="form-control">
           <option value="" disabled>Cinsiyet seçin</option>
-          <option value="erkek">Bay</option>
-          <option value="kadın">Bayan</option>
+          <option value="erkek">Erkek</option>
+          <option value="kadın">Kadın</option>
           <option value="diğer">Diğer</option>
         </select>
         <div *ngIf="userForm.get('cinsiyet')?.invalid && userForm.get('cinsiyet')?.touched" class="text-danger">
